@@ -305,18 +305,18 @@ header{
 	height: 120 px;
 	background: rgba(255, 255, 255, 10,70);
 }
-nav{
+.nav{
 	width: 1000px;
 	height: 65px;
 	background: #003f5e;
 	border-radius: 0px 0px 10px 10px;
 	color: #006680;
 }
-ul{
+.ul{
 margin: auto;
 padding-top: 4px;
 }
-li{
+.li{
 	float: left;
 	list-style-type: none;
 	padding: 13px;
@@ -332,7 +332,7 @@ section{
 	height: 720px;
 	float: left;
 	margin-top: 7px;
-	border-radius: 10px 0px 0px 0px;
+	border-radius: 10px 10px 0px 0px;
 }
 aside{
 	width: 280px;
@@ -388,4 +388,39 @@ p {
 	font-size: 12px;
 	font-weight: normal;
 	color: #333;
+}
+.li1{
+	float: left;
+	list-style-type: none;
+	padding: 11.9px;
+	background: #003f5e;
+	margin: 0px;
+	border-radius: 0px;
+	margin-top: 0px;
+	text-decoration: none;
+}
+.li1:hover{
+	text-decoration: none;
+}
+.menu1:visited{
+	color: #fff;
+	text-decoration: none;
+}
+.menu1:link{
+	text-decoration: none;
+}
+.nav1{
+	width: 713px;
+	height: 40px;
+	background: #003f5e;
+	border-radius: 10px 10px 0px 0px;
+	color: #006680;
+}
+.ul1{
+margin: auto;
+padding-top: 0px;
+}
+.menu1:visited:hover{
+	color: #FF6600;
+	text-decoration: none;
 }
