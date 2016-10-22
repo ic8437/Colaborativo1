@@ -23,12 +23,24 @@
    			<p>&nbsp;</p>
             <p>&nbsp;</p>
     		<nav class="nav">
-              <ul class="ul" class="menu">
-                <li class="li"><a href="index.html" class="menu">Inicio</a></li>
-                <li class="li"><a href="lecturas.html" class="menu">Lecturas</a></li>
-                <li class="li"><a href="multimedia.html" class="menu">Multimedia</a></li>
-                <li class="li"><a href="Actividad1.html" class="menu">Actividades</a></li>
-                <li class="li"><a href="autores.html" class="menu">Autores</a></li>
+              <ul class="menu">
+                <li><a href="index.html" class="menu">Inicio</a></li>
+                <li><a href="lecturas.html" class="menu">Lecturas</a>
+                  <ul>
+                    <li><a href="lecturas.html" class="menu">Introduccion a PHP</a></li>
+                    <li><a href="lectura1.html" class="menu">Estructura PHP</a></li>
+                    <li><a href="lectura2.html" class="menu">Base Datos con PHP</a></li>
+                  </ul>
+                </li>
+                <li><a href="multimedia.html" class="menu">Multimedia</a></li>
+                <li><a href="#" class="menu">Actividades</a>
+                  <ul>
+                    <li><a href="Actividad1.html" class="menu">Sopa de Letas</a></li>
+                    <li><a href="Actividad2.html" class="menu">Crucigrama</a></li>
+                    <li><a href="Actividad3.html" class="menu">Completar</a></li>
+                  </ul>
+                </li>
+                <li><a href="autores.html" class="menu">Autores</a></li>
                 <div id="apDiv19">
                 <center>
                 	<div id="cuentavisitas"></div>
@@ -62,24 +74,98 @@
              </nav>
             <div id="apDiv14"><a href="https://campus0a.unad.edu.co/campus0/login/index.php" target="_blank"><img src="img/campus.png" width="116" height="101"></a>									</div>
     <section>
-    <nav class="nav1">
-      <ul class="ul1">
-        <li class="li1"><a class="menu1" href="lecturas.html">Introduccion a PHP</a></li>
-        <li class="li1"><a class="menu1" href="lectura1.html">Estructura PHP</a></li>
-          <li class="li1"><a class="menu1" href="lectura2.html">Base Datos con PHP</a></li>
-      </ul>
-    </nav>
-    <h2>Diseño de Sitios Web - UNAD ECBTI</h2>
+    
+    
     <div id="apDiv20"><a href="https://informacion.unad.edu.co/correo" target="_blank"><img src="img/rss_aqu_32.png" class="menu" title="Correo Institucional" border="0" /></a></div>
+        <div style="height: 620px;width: 713px; overflow-y: auto; ">
                 <article>
                     <figure>
-                        <img src="img/diseno_web.jpg" alt="Diseno">
+                        <img src="img/BDPHP.png" height="200" width="300" alt="Diseno">
+                        <h5><em>Imagen mySql - Recuperado de http://aulamatriz.edu.co/img/mysql-php-logo.png</em></h5>
                   	</figure>
-                    <p>
-                        Propósitos del curso:<br>
-                        • Que el estudiante se fundamente teóricamente sobre las generalidades básicas del Diseño Web.<br>
-                        • Que el estudiante pueda utilizar de forma correcta los lenguajes HTML5 y CSS3 para aplicarlos en la solución de problemas de construcción de Sitios Web.<br>
-                        • Que el estudiante implemente servicios y sitios web a través de los sistemas gestores de contenidos CMS y LMS libres más usados en la actualidad.<br>
+                    
+                         <p>
+<strong class="texto1"> Diseño de Base Datos con PHP</strong> <br>
+
+El primer paso es siempre crear una base de datos, a menos que se quiera utilizar una de un tercero. Cuando se crea una base de datos, esta es asignada a un propietario, aquel que ejecutó la sentencia de creación. Usualmente, sólo el propietario (o un superusuario) puede hacer cualquier cosa con los objetos de esa base de datos. Para que otros usuarios puedan utilizarla, se les deben conceder privilegios.<br><br>
+
+Las aplicaciones nunca deberían conectarse a la base de datos como su propietario o como un superusuario, porque estos usuarios pueden ejecutar cualquier consulta a su antojo; por ejemplo, modificar el esquema (p.ej., eliminar tablas) o borrar su contenido por completo.<br><br>
+
+Se pueden crear distintos usuarios de una base de datos para cada aspecto de la aplicación con permisos muy limitados a los objetos de dicha base de datos. Solamente deberían otorgarse los privilegios necesarios, evitando así que el mismo usuario pueda interactuar con la base de datos en diferentes casos y uso. Esto significa que si un intruso obtiene acceso a una base de datos utilizando las credenciales de la aplicación, solamente puede efectuar los cambios que la aplicación permita.<br><br>
+
+Se recomienda no implementar toda la lógica de negocio en la aplicación web (esto es, en los scripts); se ha de hacer en su lugar en el esquema de la base de datos utilizando vistas, disparadores o reglas. Si el sistema evoluciona, se tendrá por objeto abrir nuevos puertos a la base de datos, teniendo así que reimplementar la lógica en cada cliente de la base de datos por separado. Además, los disparadores se pueden utilizar para manejar campos de forma transparente y automática, lo que a menudo ayuda en la depuración de problemas con la aplicación o en el seguimiento de transacciones.<br>
+   <p>
+<strong class="texto1"> funciones basicas</strong> <br>                            
+                             
+Se utiliza para conectarse con un servidor de bases de datos, se usa normalmente con 3 parametros, el dominio del servidor, nombre de usuario y password.<br>
+
+Ejemplo:<br>
+       
+$conexion = mysql_connect("localhost", "user","password");<br> 
+       
+    <strong class="texto1">   mysql_select_db</strong> <br> 
+
+Se utiliza para elegir la base de datos que queremos gestionar una vez que se ha realizado la conexión con mysql_connect. Habitualmente se utiliza con 2 parametros, el nombre de la base de datos y la referencia a la conexión realizada con mysql_connect().<br> 
+
+Ejemplo:<br> 
+
+
+$conexion = mysql_connect("localhost", "user","password");<br> 
+
+mysql_database("nombre_base_datos",$conexion);<br> 
+        
+<strong class="texto1">mysql_query</strong> <br> 
+
+Se utiliza para hacer “querys” o peticiones a la base de datos, se utiliza con 2 parametros, la petición(escrita en lenguaje mysql) y la referencia a la conexión de la base de datos.<br> 
+
+Ejemplo:<br> 
+
+
+$conexion = mysql_connect("localhost", "user","password");<br> 
+
+mysql_database("nombre_base_datos",$conexion);<br> 
+
+
+$q = mysql_query("select * from tabla",$conexion);<br> 
+
+    
+    <strong class="texto1">mysql_result</strong> <br> 
+
+Se utiliza para obtener un resultado que puede ser realizado con una query, se usa basicamente con 2 o 3 parametros, donde el primero es la “query” y el segundo y tercero son indicadores numericos que indican la posición de la variable que queremos obtener(como indices de un arreglo).<br> 
+
+Ejemplo basico:<br> 
+
+
+$conexion = mysql_connect("localhost", "user","password");<br> 
+
+mysql_database("nombre_base_datos",$conexion);<br> 
+
+$resultado = mysql_result(mysql_query("select * from tabla1"),0);<br> 
+
+        otra forma:<br> 
+
+ 
+
+
+$conexion = mysql_connect("localhost", "user","password");<br> 
+
+mysql_database("nombre_base_datos",$conexion);<br> 
+
+
+$query = mysql_query("select * from tabla",$conexion);<br> 
+
+$resultado = ($query,0);<br> 
+       
+       <figure>
+                        <img src="img/myadmin.PNG" alt="Diseno">
+                  	</figure>  
+         
+        <br><br>
+<em>Bibliografía<br><br>
+
+estructura de php.codigoprogramacion.com. Recuperado el 18 de octubre de 2016 de: http://codigoprogramacion.com/cursos/php-y-mysql/123-conectar-php-y-mysql-primera-conexion-con-mysqlconnect.html#.WArTBWbhC00<br><br>
+       
+       
                     </p>
       			</article>
     </section>

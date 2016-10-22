@@ -23,12 +23,24 @@
    			<p>&nbsp;</p>
             <p>&nbsp;</p>
     		<nav class="nav">
-              <ul class="ul" class="menu">
-                <li class="li"><a href="index.html" class="menu">Inicio</a></li>
-                <li class="li"><a href="lecturas.html" class="menu">Lecturas</a></li>
-                <li class="li"><a href="multimedia.html" class="menu">Multimedia</a></li>
-                <li class="li"><a href="Actividad1.html" class="menu">Actividades</a></li>
-                <li class="li"><a href="autores.html" class="menu">Autores</a></li>
+              <ul class="menu">
+                <li><a href="index.html" class="menu">Inicio</a></li>
+                <li><a href="lecturas.html" class="menu">Lecturas</a>
+                  <ul>
+                    <li><a href="lecturas.html" class="menu">Introduccion a PHP</a></li>
+                    <li><a href="lectura1.html" class="menu">Estructura PHP</a></li>
+                    <li><a href="lectura2.html" class="menu">Base Datos con PHP</a></li>
+                  </ul>
+                </li>
+                <li><a href="multimedia.html" class="menu">Multimedia</a></li>
+                <li><a href="#" class="menu">Actividades</a>
+                  <ul>
+                    <li><a href="Actividad1.html" class="menu">Sopa de Letas</a></li>
+                    <li><a href="Actividad2.html" class="menu">Crucigrama</a></li>
+                    <li><a href="Actividad3.html" class="menu">Completar</a></li>
+                  </ul>
+                </li>
+                <li><a href="autores.html" class="menu">Autores</a></li>
                 <div id="apDiv19">
                 <center>
                 	<div id="cuentavisitas"></div>
@@ -62,26 +74,97 @@
              </nav>
             <div id="apDiv14"><a href="https://campus0a.unad.edu.co/campus0/login/index.php" target="_blank"><img src="img/campus.png" width="116" height="101"></a>									</div>
     <section>
-    <nav class="nav1">
-      <ul class="ul1">
-        <li class="li1"><a class="menu1" href="lecturas.html">Introduccion a PHP</a></li>
-        <li class="li1"><a class="menu1" href="lectura1.html">Estructura PHP</a></li>
-          <li class="li1"><a class="menu1" href="lectura2.html">Base Datos con PHP</a></li>
-      </ul>
-    </nav>
-    <h2>Diseño de Sitios Web - UNAD ECBTI</h2>
+    
+    <h2>Estructura basica - PHP</h2>
     <div id="apDiv20"><a href="https://informacion.unad.edu.co/correo" target="_blank"><img src="img/rss_aqu_32.png" class="menu" title="Correo Institucional" border="0" /></a></div>
-                <article>
-                    <figure>
-                        <img src="img/diseno_web.jpg" alt="Diseno">
+        <div style="height: 620px;width: 713px; overflow-y: auto; ">
+<article>
+<figure>
+                        <img src="img/estructura2.jpg"alt="Diseno" height="200px" width="400">
+                        <h5><em>Imagen php - Recuperado de http://www.sincapinfo.com/assets/images/placehold/phpn.jpg</em></h5>
                   	</figure>
                     <p>
-                        Propósitos del curso:<br>
-                        • Que el estudiante se fundamente teóricamente sobre las generalidades básicas del Diseño Web.<br>
-                        • Que el estudiante pueda utilizar de forma correcta los lenguajes HTML5 y CSS3 para aplicarlos en la solución de problemas de construcción de Sitios Web.<br>
-                        • Que el estudiante implemente servicios y sitios web a través de los sistemas gestores de contenidos CMS y LMS libres más usados en la actualidad.<br>
-                    </p>
-      			</article>
+<strong class="texto1"> Sintaxis Basica PHP</strong> <br>
+• PHP es sensible a las mayúsculas<br>
+• Etiquetas PHP:<br>
+- ?PHP ... ?, recomendado, siempre disponible<br>
+- ?= expresión ?, equivale a <? echo expresión ?><br>
+- Las instrucciones se separan con un ; como en C. <br>
+- La marca final ? implica un ;<br>
+- Comentarios: como en C, /* … */ y //<br>
+- Para imprimir echo y print.<br>
+                        
+
+
+                        <figure>
+                        <img src="img/estructura.jpg"alt="Diseno" height="200px" width="400">
+                            <h5><em>Imagen php sintaxis - Recuperado de http://image.slidesharecdn.com/estructurabasicaphp-130216112853-phpapp01/95/estructura-bsica-de-php-3-638.jpg?cb=1361014259/</em></h5>
+                  	</figure>
+
+<p>
+<strong class="texto1">Tipos de datos en php</strong> <br>
+En PHP no es obligatorio indicar el tipo de datos al que pertenece una variable como en otros lenguajes, sino que los tipos de datos son establecidos directamente por el intérprete PHP, que es el encargado de interpretar el código.<br>
+
+Ahora veremos en una tabla los distintos tipos de datos que se pueden usar en PHP.<br>
+<br>
+    <figure>
+                        <img src="img/datos.PNG"alt="Diseno" >
+                            <h5><em>Imagen php datos - Recuperado de http://aprenderaprogramar.com/index.php?option=com_content&view=article&id=544:tipos-de-variables-en-php-declaracion-y-asignacion-sentencia-echo-insertar-texto-en-el-html-cu00816b&catid=70:tutorial-basico-programador-web-php-desde-cero&Itemid=193</em></h5>
+                  	</figure><br><br>
+    
+                        <p>
+<strong class="texto1">Funciones de interes en  PHP</strong> <br>
+La función gettype() devuelve el tipo de una variable<br>
+Las funciones is_ type comprueban si una variable es de un tipo dado: is_array(), is_bool(), is_float(), is_integer(), is_null(),is_numeric(), is_object(), is_resource(), is_scalar(),is_string() <br>
+La función var_dump() muestra el tipo y el valor de una variable. Es especialmente interesante con los arrays
+<br>
+<p>
+<strong class="texto1">variables en  PHP</strong> <br>
+                        
+Las variables en PHP son representadas con un signo de dólar ($) seguido por el nombre de la variable. El nombre de la variable es sensible a minúsculas y mayúsculas. Es decir, las siguientes declaraciones de variables son distintas entre ellas:<br><br>
+$variable, $Variable, $variAble, $VariAble, etc. representan a distintas variables.<br><br>
+
+Recordar que una variable es un espacio de la memoria del ordenador (en este caso del servidor) a la que asignamos un contenido que a grandes rasgos puede ser un valor numérico (sólo números, con su valor de cálculo) o alfanumérico (sólo texto o texto con números, sin valor de cálculo).<br>
+
+Para declarar un nombre de variable válido, éste tiene que empezar con una letra (o si no empieza con una letra, tendrá que hacerlo con un carácter de subrayado), seguido de cualquier número de letras, números y caracteres de subrayado, sin espacios. Veamos algunos ejemplos:<br><br>
+
+
+
+                         <figure>
+                        <img src="img/variable.PNG"alt="Diseno" >
+                            <h5><em>Imagen php variables - Recuperado de http://aprenderaprogramar.com/index.php?option=com_content&view=article&id=544:tipos-de-variables-en-php-declaracion-y-asignacion-sentencia-echo-insertar-texto-en-el-html-cu00816b&catid=70:tutorial-basico-programador-web-php-desde-cero&Itemid=193</em></h5>
+                  	</figure><br><br>
+    
+Cuando el intérprete PHP detecta un error en la sintaxis al declarar una variable, cuando tratamos de accecer a la página php nos aparecerá un mensaje de error. Por ejemplo si en un archivo php incluimos una línea como $ A B C = 5; donde el nombre de variable es inválido ya que tiene espacios intermedios, nos aparecerá un mensaje de error:<br>
+
+Parse error: syntax error, unexpected T_STRING, expecting T_VARIABLE or '$' in /home/miraiz/domains/midominio.com/public_html/prueba.php on line 3. Este mensaje nos informa de que hay un problema en el archivo php y nos indica la línea donde el intérprete considera que está el problema.<br><br>
+
+ 
+DIFERENCIAS ENTRE LOS OPERADORES DE ASIGNACIÓN E IGUALDAD. ASIGNACIÓN (=)<br><br>
+
+El operador de asignación es "=". Se podría pensar que es como un "igual a". No lo es. El operador igual en programación no tiene el mismo sentido que en matemáticas. En programación, significa que el valor de la expresión de la derecha se establece en el operando de la izquierda.<br>
+
+Fíjate en este ejemplo y en los comentarios.<br><br>
+    
+  <figure>
+                        <img src="img/variable2.PNG"alt="Diseno" >
+                            <h5><em>Imagen php variables - Recuperado de http://aprenderaprogramar.com/index.php?option=com_content&view=article&id=544:tipos-de-variables-en-php-declaracion-y-asignacion-sentencia-echo-insertar-texto-en-el-html-cu00816b&catid=70:tutorial-basico-programador-web-php-desde-cero&Itemid=193</em></h5>
+                  	</figure><br><br>  
+    
+    <p>
+
+        <br><br>
+<em>Bibliografía<br><br>
+
+estructura de php.aprendeaprogramar.net. Recuperado el 18 de octubre de 2016 de: http://aprenderaprogramar.com/index.php?option=com_content&view=article&id=544:tipos-de-variables-en-php-declaracion-y-asignacion-sentencia-echo-insertar-texto-en-el-html-cu00816b&catid=70:tutorial-basico-programador-web-php-desde-cero&Itemid=193<br><br>
+
+
+<br>
+
+</em>
+    
+                   </p>
+      			</article></div>
     </section>
     <aside> 
                 <div id="apDiv5">
